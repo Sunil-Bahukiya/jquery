@@ -1,2 +1,2 @@
 # jquery
-jquery full course
+jquery full course details
