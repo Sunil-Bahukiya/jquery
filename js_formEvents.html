@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery formevents</title>
+</head>
+<body>
+    <form id="iform">
+        <label>Username :</label>&nbsp;&nbsp;<input type="text" id="uname"/><br><br>
+        <label>Password :</label>&nbsp;&nbsp;<input type="password" id="pass"/><br><br>
+       <label>Hobby :</label>&nbsp;&nbsp;<input type="checkbox" id="#check1"/>Cricket
+       <input type="checkbox" id="#check1"/>kho-kho<br><br>
+        <label>Country :</label>&nbsp;&nbsp;
+        <select id="country">
+            <option>India</option>
+            <option>Pakisthan</option>
+            <option>Nepal</option>
+            <option>Bangladesh</option>
+        </select><br><br>
+        <input type="submit" id="msubmit"/>
+    </form>
+    <hr>
+    <div id="uborder"></div>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+          $('#uname').focus(function(){
+            $(this).css('color','green');
+          });
+          $('#uname').blur(function(){
+            $(this).css('color','');
+          });
+          $('#country').change(function(){
+            $(this).css('color','blue');
+            var a=$(this).val();
+            $('#uborder').html(a);
+          });
+          $('form').submit(function(){
+            alert('submit success');
+          });
+          
+        });
+
+        
+    </script>
+</body>
+</html>

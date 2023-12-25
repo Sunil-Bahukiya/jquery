@@ -48,8 +48,16 @@
     <script src="js/jquery.js"></script>
     <script>
         $(document).ready(function(){
-            $('p').scroll(function(){
-                $('p').css('color','red');
+            $(window).scroll(function(){
+            //    console.log('scrolling');
+            $('.box2 h2').css('color','green');
+            $('.box2 p').css('color','red');
+            $('body').css('backgroundColor','black');
+
+            $(window).resize(function(){
+                $('body').css('backgroundColor','orange');
+               
+            });
             });
         });
 
