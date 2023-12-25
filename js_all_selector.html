@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery first demo</title>
+    <style>
+        .box2{
+            background-color: tan;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1 bx1" id="test1">
+        <h2>Hello world</h2>
+    </div>
+    <div class="box2" id="test2">
+        <h3>Good Morning</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquid!</p>
+        <p>Lorem ipsum dolor sit.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            //class selector
+            $('.box1').click(function(){
+                $('.box1').css('backgroundColor','green');
+            });
+
+            // id selector
+            $('#test1').click(function(){
+                $('#test1').css('fontSize','25px');
+            });
+
+            // multiple class selector
+             $('.box1 ,.box2').click(function(){
+                $('.box1 ,.box2').css('fontSize','25px');
+            });
+            
+            //element selector
+            $('h3,h2').click(function(){
+                $('h3,h2').css('color','red');
+            });
+        });
+    </script>
+</body>
+</html>

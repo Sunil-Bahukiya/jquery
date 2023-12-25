@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery mouseevent</title>
+    <style>
+        .box2{
+            background-color: tan;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box2" id="test2">
+        <h3>Good Morning</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquid!</p>
+        <p>Lorem ipsum dolor sit.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script>
+       $(document).ready(function(){
+
+        //mouse click event
+        $('#test2').click(function(){
+            $('#test2').css('backgroundColor','green');
+        });
+
+        //mouse dblclick event
+        $('#test2').dblclick(function(){
+            $('#test2').css('backgroundColor','orange')
+        });
+
+         //mouse mouseenter event
+         $('#test2').mouseenter(function(){
+            $('#test2').css('backgroundColor','black');
+            $('#test2').css('color','white');
+        });
+
+        //mouse mouseleave event
+        $('#test2').mouseleave(function(){
+            $('#test2').css('backgroundColor','red');
+            // $('#test2').css('color','white');
+        });
+
+         //mouse mouseup,mousedown event
+         
+       });
+    </script>
+</body>
+</html>

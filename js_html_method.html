@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery html method</title>
+    <style>
+        .box2{
+            background-color: tan;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1 bx1" id="test1">
+        <h2>Hello world</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident id eveniet voluptatibus! Atque, nisi totam! Deserunt ad reprehenderit libero accusamus at. Veniam totam quaerat similique. Tenetur, eos ipsa. At, repudiandae?</p>
+    </div>
+    
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            var a=$('.box1').html();
+            console.log(a);
+
+            console.log('<br>');
+            var a=$('.box1 h2').html();
+            console.log(a);
+
+            console.log('<br>');
+            var a=$('.box1 p').html();
+            console.log(a);
+        });
+
+        
+    </script>
+</body>
+</html>
