@@ -20,10 +20,20 @@
     <script src="js/jquery.js"></script>
     <script>
         $(document).ready(function(){
-            $('#test2').keypress(function(){
-               // $('#test2').css('backgroundColor','red');  
-               alert('keypress');
-            });
+            //keypress event
+           $('body').keypress(function(){
+            $('#test2').css('backgroundColor','red');
+           });
+
+            //keydown event
+            $('body').keydown(function(){
+            $('#test2').css('backgroundColor','green');
+           });
+
+           //keyup event
+           $('body').keyup(function(){
+            $('#test2').css('backgroundColor','pink');
+           });
         });
 
         
