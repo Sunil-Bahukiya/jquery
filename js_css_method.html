@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery css method</title>
+    <style>
+        #box1{
+            background-color: crimson;
+            height: 300px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <h1>Jquery css method</h1>
+    <div id="box1" class="cbox1">
+        <h2>hello world</h2>
+        <p class="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, dicta?</p>
+    </div> 
+    <br><br>
+    
+    <script src="js/jquery.js"></script>
+    <script>
+       $(document).ready(function(){
+        // single line css
+        $('.test').css('background','white'); 
+
+        //multiline css code
+        $('.test').css({
+            color:'red',
+            fontSize:25,
+            borderBottom:'3px solid black',
+        }); 
+
+       });
+    </script>
+</body>
+</html>
