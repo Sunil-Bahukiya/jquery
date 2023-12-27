@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery set method</title>
+    <style>
+        #box1{
+            background: rebeccapurple;
+            color: white;
+            height: 200px;
+            
+        }h5{
+            color:white;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Jquery setmethod</h1>
+    <div id="box1" class="pqr xyz" >
+        <h2>Codingwithsunil</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam maiores eveniet, alias suscipit atque, sunt omnis officia unde assumenda dicta incidunt laborum praesentium eum! Dolorum omnis doloremque qui voluptate enim?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa accusantium odit iusto hic qui voluptas non temporibus quisquam quos iste.</p>
+    </div><br>
+    <input type="submit" id="save" value="value Set">
+    <script src="js/jquery.js"></script>
+    <script>
+       $(document).ready(function(){
+        $('#save').click(function(){
+            //set html
+            $('#box1').html('<h5>hello world</h5>');
+
+            //set text
+            $('#box1').text('coding with sunil');
+
+            //set class
+           var a= $('#box1').attr('class','abc');
+            console.log(a);
+        });
+       });
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery getval method</title>
+
+</head>
+<body>
+    <form id="save">
+        <label>FName : </label>&nbsp;&nbsp;<input type="text" id="fname"/><br><br>
+        <label>LName : </label>&nbsp;&nbsp;<input type="text" id="lname"/><br><br>
+       <input type="submit" id="submit"/><br><br>
+    </form>
+    <script src="js/jquery.js"></script>
+    <script>
+       $(document).ready(function(){
+        $('#save').submit(function(){
+            var name=$('#fname').val();
+            var lname=$('#lname').val();
+            alert('firstname : ' + name + "  " + 'lastname : ' + lname);
+            
+        });
+       });
+    </script>
+</body>
+</html>
