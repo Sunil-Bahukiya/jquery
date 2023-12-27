@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery css RemoveClass method</title>
+    <style>
+        #box1{
+            background-color: crimson;
+            height: 300px;
+        }
+        .test{
+            border:5px dotted green;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Jquery addClass method</h1>
+    <div id="box1" class="cbox1">
+        <h2>hello world</h2>
+        <p class="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, dicta?</p>
+    </div> 
+    <br><br>
+    <input type="submit" id="save" value="RemoveClass"/>
+    <script src="js/jquery.js"></script>
+    <script>
+       $(document).ready(function(){
+        $('#save').click(function(){
+            $('#box1 p').removeClass('test');
+        });
+       });
+    </script>
+</body>
+</html>
