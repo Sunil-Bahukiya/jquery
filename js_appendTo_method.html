@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery appendTo method</title>
+    <style>
+        #box1{
+            background: coral;
+            height: auto;
+            padding-bottom: 20px;
+            
+        }h5{
+            border:1px dotted red;
+        }
+        
+    </style>
+</head>
+<body>
+    
+        <h1>jquery appendTo method</h1>
+        <div id="box1" class="test">
+            <h4>Hello World</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, vero?</p>
+        </div>
+    </div> 
+    <br><br>
+    <input type="submit" id="submit" value="appendTo">
+    <script src="js/jquery.js"></script>
+    <script>
+       $(document).ready(function(){
+        $('#submit').on('click',function(){
+            $('<h5>Hello world</h5>').appendTo('p');
+        });
+       });
+    </script>
+</body>
+</html>
