@@ -3,22 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jquery effect method</title>
+    <title>jquery slide method</title>
     <style>
-      #box1{
-        background-color: cadetblue;
+    #box1{
+        background-color: brown;
+        color: white;
+        font-size: 20px;
+        padding-top: 15px;
+        text-align: center;
+        height: 50px;
+    }
+      #box2{
+        display: none;
+        background-color:darkgoldenrod;
         color: wheat;
         padding: 20px;
         font-size: 20px;
       }
-      #box1 p:nth-child(2){
-        color: red;
+      #box2 p:nth-child(2){
+        color: fuchsia;
       }
     </style>
 </head>
 <body>
-        <h1>jquery effect hide show toggle method</h1>
-        <div id="box1">
+        <h1>jquery slide method</h1>
+        <div id="box1">click here</div>
+        <div id="box2">
             <h1>good morning</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, dignissimos.</p>
             <p>Lorem ipsum dolor sit amet.</p>
@@ -27,33 +37,26 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ipsa tempora corrupti repudiandae? Dolor, eveniet.</p>
             <p>Lorem, ipsum.</p>
         </div><br>
-        <button id="shide">Hide</button>
-        <button id="sshow">Show</button>
-        <button id="stoggle">Toggle</button>
+        
+        <button id="sup">Slide Up</button>
+        <button id="sdown">Slide Down</button>
+        <button id="stoggle">Slide Toggle</button>
     <script src="js/jquery.js"></script>
     <script>
        $(document).ready(function(){
-        //hide method
-        $('#shide').on('click',function(){
-            // $('#box1').hide();
-            // $('#box1').hide('slow');
-            // $('#box1').hide('speed');
-             $('#box1').hide(2000);
+        //slideup method
+        $('#sup').on('click',function(){
+            $('#box2').slideUp(1000);
         });
 
-         //show method
-         $('#sshow').on('click',function(){
-            $('#box1').show();
+        //slidedown method
+        $('#sdown').on('click',function(){
+            $('#box2').slideDown(1000);
         });
 
-         //toggle method
+         //slidetoggle method
          $('#stoggle').on('click',function(){
-            // $('#box1').toggle('slow');
-            // $('#box1').toggle('speed');
-            $('#box1').toggle(5000);
-            $('#box1').toggle('slow',function(){
-                alert('hello world');
-            });
+            $('#box2').slideToggle(1500);
         });
        });
     </script>
