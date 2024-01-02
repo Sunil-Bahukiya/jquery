@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery width all method</title>
+    <style>
+        #box1{
+            background: coral;
+            height: 500px;
+            width: 700px;
+            
+            position: absolute;
+            
+        }
+        #box2{
+            background-color: red;
+            height: 350px;
+            width: 500px;
+            margin: 10% auto;
+        }
+        #box3{
+            background-color: chartreuse;
+            height: 200px;
+            width: 250px;
+            margin: 10% auto;
+        }
+        #hdbox{
+            color:white;
+            background-color: orange;
+            height: 100px;
+            width: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="" id="box1">Outer box
+        <div class="" id="box2">Inner box 1
+            <div class="" id="box3">Inner box 2</div>
+        </div>
+    </div>
+    
+    <script src="js/jquery.js"></script>
+    <script>
+       $(document).ready(function(){
+        $('#box1').click(function(){
+            var a=$('#box1').width();
+            var b=$('#box1').innerWidth();
+            alert('width :'+ a +'  innerwidth'+ b +'  outerwidth');
+        });
+       });
+    </script>
+</body>
+</html>

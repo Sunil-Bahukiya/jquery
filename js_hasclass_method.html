@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery hasclass method</title>
+    <style>
+       .test{
+        color:red;
+        font-size: 250pxs;
+       }
+    </style>
+</head>
+<body>
+        <h1>jquery hasclass method</h1>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem magnam vitae doloremque excepturi, necessitatibus corporis iusto molestiae officia placeat voluptatem!</p>
+        <p class="test">Lorem ipsum dolor sit amet.</p>
+        <h4>Lorem, ipsum dolor.</h4>
+        <button>hasclass</button>
+    <script src="js/jquery.js"></script>
+    <script>
+       $(document).ready(function(){
+        $('button').on('click',function(){
+            const a=$('.test').hasClass('test');
+            alert(a);
+        });
+       });
+    </script>
+</body>
+</html>
