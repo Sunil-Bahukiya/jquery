@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery stop method</title>
+    <style>
+    #box1{
+        background-color: brown;
+        color: white;
+        font-size: 20px;
+        padding-top: 15px;
+        text-align: center;
+        height: 50px;
+    }
+      #box1{
+        height: 150px;
+        width: 250px;
+        background-color:darkgoldenrod;
+        color: wheat;
+        padding: 20px;
+        font-size: 20px;
+      }
+      
+    </style>
+</head>
+<body>
+        <h1>jquery animate stop(true) method</h1>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="stopall">StopAll</button><br><br>
+        <div id="box1">
+            <p>jquery</p>
+        </div>
+       
+    <script src="js/jquery.js"></script>
+    <script>
+       $(document).ready(function(){
+        //slideup method
+        $('#start').on('click',function(){
+            $('#box1').animate({marginLeft:'500px'},2000);
+            $('#box1 p').animate({fontSize:'50px'},2500);
+        });
+        $('#stop').on('click',function(){
+            $('#box1').stop();
+            
+        });
+        $('#stopall').on('click',function(){
+            $('#box1').stop(true ,true);
+            
+        });
+       });
+    </script>
+</body>
+</html>

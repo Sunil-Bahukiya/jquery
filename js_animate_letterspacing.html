@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery animate method</title>
+    <style>
+        p{
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+        <h1>jquery animate method</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <button id="anima">animate</button>
+        <button id="reset">reset</button>
+    <script src="js/jquery.js"></script>
+    <script>
+       $(document).ready(function(){
+        $('#anima').on('click',function(){
+            $('p').animate({letterSpacing:'25px'},2000);
+        });
+        $('#reset').on('click',function(){
+            $('p').animate({letterSpacing:''},1000);
+        });
+       });
+    </script>
+</body>
+</html>

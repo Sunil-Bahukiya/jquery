@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery stop method</title>
+    <style>
+    #box1{
+        background-color: brown;
+        color: white;
+        font-size: 20px;
+        padding-top: 15px;
+        text-align: center;
+        height: 50px;
+    }
+      #box2{
+        display: none;
+        background-color:darkgoldenrod;
+        color: wheat;
+        padding: 20px;
+        font-size: 20px;
+      }
+      #box2 p:nth-child(2){
+        color: fuchsia;
+      }
+    </style>
+</head>
+<body>
+        <h1>jquery animate stop method</h1>
+        <button id="stop">Stop</button>
+        <div id="box1">click here</div>
+        <div id="box2">
+            <h1>good morning</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, dignissimos.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ipsa tempora corrupti repudiandae? Dolor, eveniet.</p>
+            <p>Lorem, ipsum.</p>
+        </div><br>
+        
+       
+        <button id="sdown">Slide Down</button>
+       
+    <script src="js/jquery.js"></script>
+    <script>
+       $(document).ready(function(){
+        //slideup method
+        $('#sdown').on('click',function(){
+            $('#box2').slideDown(3000);
+        });
+        //stop method
+        $('#stop').on('click',function(){
+            $('#box2').stop();
+        });
+       });
+    </script>
+</body>
+</html>
